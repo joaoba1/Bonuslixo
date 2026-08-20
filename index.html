@@ -9,7 +9,7 @@
 <body>
   <header class="topbar">
     <div class="brand" aria-label="Logo da página">
-      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=300&q=80" alt="Ícone de cassino" class="brand__icon">
+      <img src="assets/image/logo.png" alt="Ícone de cassino" class="brand__icon">
     </div>
 
     <button type="button" class="warning-btn" aria-label="Aviso: proibido para menores de 18 anos" disabled>
@@ -26,22 +26,41 @@
           Acompanhe a live, veja dicas e descubra as melhores casas de aposta com bônus exclusivos.
         </p>
         <div class="hero__actions">
-          <a class="primary-btn" href="#links">Ver casas</a>
+          <a class="primary-btn" href="#banquinha">Banquinha</a>
           <a class="secondary-btn" href="#socials">Siga a live</a>
         </div>
       </div>
 
       <div class="hero__cover">
-        <div class="hero__iframe-wrap" style="position:relative;padding-top:56.25%;">
+        <div class="hero__switcher" aria-label="Escolha o canal da live">
+          <button type="button" class="channel-toggle is-active" data-channel="dukoth" aria-pressed="true">Dukoth</button>
+          <button type="button" class="channel-toggle" data-channel="duke" aria-pressed="false">Dukevy</button>
+        </div>
+
+        <div class="hero__iframe-wrap">
           <iframe
-            id="twitch-embed"
-            src="https://player.twitch.tv/?channel=dukoth&parent=127.0.0.1"
+            id="twitch-embed-dukoth"
+            src="https://player.twitch.tv/?channel=dukoth&parent=joaoba1.github.io"
             title="Dukoth - Twitch"
             class="hero__iframe"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
             frameborder="0"
+            autoPlay
+            muted
             scrolling="no"
             allowfullscreen>
+          </iframe>
+
+          <iframe
+            id="twitch-embed-duke"
+            src="https://player.twitch.tv/?channel=dukevy&parent=joaoba1.github.io"
+            title="Duke - Twitch"
+            class="hero__iframe hero__iframe--alt"
+            frameborder="0"
+            autoPlay
+            muted
+            scrolling="no"
+            allowfullscreen
+            hidden>
           </iframe>
         </div>
       </div>
@@ -49,57 +68,72 @@
 
     <section class="live-events">
       <h2>Eventos da live</h2>
+    
       <div class="events-grid">
+    
         <article class="event-card">
           <h3>Banca compartilhada</h3>
-          <p>Acompanhe a banca sendo compartilhada em tempo real. Veja cada movimento e aprenda com as decisões.</p>
+    
+          <p class="event-description">
+            Acompanhe a banca compartilhada em tempo real.
+          </p>
+    
+          <div class="event-more">
+            <p>
+              A banca é formada durante a live com os participantes.
+              Acompanhe cada movimento, as decisões tomadas e o
+              resultado da banca em tempo real.
+            </p>
+          </div>
+    
+          <button class="event-more-btn" type="button" aria-expanded="false">
+            Saiba mais
+            <span>⌄</span>
+          </button>
         </article>
+    
+    
         <article class="event-card">
           <h3>Banca do desespero</h3>
-          <p>Os momentos mais tensos da live. Quando a banca está no limite e as apostas ficam cada vez mais altas.</p>
+    
+          <p class="event-description">
+            Os momentos mais tensos da live. ultimas chances de salvar a banca.
+          </p>
+    
+          <div class="event-more">
+            <p>
+              Quando a banca está no limite e as apostas ficam cada vez
+              mais altas, acompanhe os momentos de maior tensão da live.
+            </p>
+          </div>
+    
+          <button class="event-more-btn" type="button" aria-expanded="false">
+            Saiba mais
+            <span>⌄</span>
+          </button>
         </article>
+    
+    
         <article class="event-card">
           <h3>Rinha</h3>
-          <p>Confrontos diretos entre participantes. Quem consegue fazer a melhor sequência de acertos?</p>
+    
+          <p class="event-description">
+            Confrontos diretos entre participantes. da live!
+          </p>
+    
+          <div class="event-more">
+            <p>
+              Os participantes entram em confronto para tentar conseguir
+              a melhor sequência de resultados durante a transmissão.
+            </p>
+          </div>
+    
+          <button class="event-more-btn" type="button" aria-expanded="false">
+            Saiba mais
+            <span>⌄</span>
+          </button>
         </article>
-      </div>
-    </section>
-
-    <section class="video-stack-section">
-      <h2>As maiores forras da live</h2>
-      <div class="video-stack" aria-label="Maiores ganhos da live">
-        <article class="video-card video-card--featured">
-          <div class="video-thumb video-thumb--one">
-            <span class="video-tag">R$ 1.280</span>
-            <button type="button" class="play-button" aria-label="Assistir vídeo 1">▶</button>
-          </div>
-          <div class="video-meta">
-            <h3>Forra no mental ||</h3>
-            <p>Seis entradas certeiras em sequência e a banca girando a favor do cassino.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-thumb video-thumb--two">
-            <span class="video-tag">R$ 980</span>
-            <button type="button" class="play-button" aria-label="Assistir vídeo 2">▶</button>
-          </div>
-          <div class="video-meta">
-            <h3>Lucro em alta</h3>
-            <p>Uma seleção com odds explosivas que virou ponto alto da transmissão.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-thumb video-thumb--three">
-            <span class="video-tag">R$ 1.540</span>
-            <button type="button" class="play-button" aria-label="Assistir vídeo 3">▶</button>
-          </div>
-          <div class="video-meta">
-            <h3>Fechou no verde</h3>
-            <p>O maior ganho do dia, com timing perfeito e reação rápida da live.</p>
-          </div>
-        </article>
+    
       </div>
     </section>
 
@@ -107,25 +141,91 @@
         <div class="partners__container">
           <h2 class="partners__title">Parceiros</h2>
           <div class="partners__carousel">
-            <div class="partners__track">
-              <div class="partners__group">
-                <div class="partner">sportingbet</div>
-                <div class="partner">bet365</div>
-                <div class="partner">1xbet</div>
-                <div class="partner">pixbet</div>
-                <div class="partner">betano</div>
-                <div class="partner">sportingbet</div>
-              </div>
-                    <!-- DUPLICADO -->
-              <div class="partners__group">
-                <div class="partner">sportingbet</div>
-                <div class="partner">bet365</div>
-                <div class="partner">1xbet</div>
-                <div class="partner">pixbet</div>
-                <div class="partner">betano</div>
-                <div class="partner">sportingbet</div>
-              </div>
+    <div class="partners__track">
+
+        <!-- GRUPO 1 -->
+        <div class="partners__group">
+            <div class="partner">
+                <img src="assets/image/Esportes-logo.png" alt="Esportes da Sorte">
             </div>
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">1xbet</div>
+            <div class="partner">pixbet</div>
+            <div class="partner">
+                <img src="assets/image/logojogodeouro.png" alt="Jogo de Ouro">
+            </div>
+            <div class="partner">
+                <img src="assets/image/logoonabet.webp" alt="Onabet">
+            </div>
+        </div>
+
+        <!-- GRUPO 2 -->
+        <div class="partners__group" aria-hidden="true">
+            <div class="partner">
+                <img src="assets/image/Esportes-logo.png" alt="">
+            </div>
+
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">1xbet</div>
+            <div class="partner">pixbet</div>
+
+            <div class="partner">
+                <img src="assets/image/logojogodeouro.png" alt="">
+            </div>
+
+            <div class="partner">
+                <img src="assets/image/logoonabet.webp" alt="">
+            </div>
+        </div>
+
+        <!-- GRUPO 3 -->
+        <div class="partners__group" aria-hidden="true">
+            <div class="partner">
+                <img src="assets/image/Esportes-logo.png" alt="">
+            </div>
+
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">1xbet</div>
+            <div class="partner">pixbet</div>
+
+            <div class="partner">
+                <img src="assets/image/logojogodeouro.png" alt="">
+            </div>
+
+            <div class="partner">
+                <img src="assets/image/logoonabet.webp" alt="">
+            </div>
+        </div>
+
+        <!-- GRUPO 4 -->
+        <div class="partners__group" aria-hidden="true">
+            <div class="partner">
+                <img src="assets/image/Esportes-logo.png" alt="">
+            </div>
+
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">bet365</div>
+            <div class="partner">1xbet</div>
+            <div class="partner">pixbet</div>
+
+            <div class="partner">
+                <img src="assets/image/logojogodeouro.png" alt="">
+            </div>
+
+            <div class="partner">
+                <img src="assets/image/logoonabet.webp" alt="">
+            </div>
+        </div>
+
+    </div>
+</div>
         </div>
       </div>
     </section>
@@ -151,7 +251,7 @@
       </div>
     </section>
 
-    <section class="how-it-works">
+    <section id="banquinha" class="how-it-works">
       <h2>Como participar</h2>
       <div class="steps">
         <div class="step-item">
